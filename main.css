@@ -60,3 +60,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+/**
+ * Color Settings
+ */
+
+.--black { color: black; }
+.--white { color: white; }
+.--dark-gray { color: #555; }
+.--red { color:#E22C4B; }
+
