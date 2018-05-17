@@ -1,0 +1,15 @@
+// - Featured Object: /views/_data/featured.pug
+
+section#home-cover.featured.cover(style="background-image: url(" + featured.bg + ");")
+  .row
+    article.cover-video
+      figure.cover-video--category
+        img(src=featured.category.img.white, alt="Logotipo da série "+ featured.category.name+ " do "+ siteName)
+      h2.cover-video--title #{featured.title}
+      p.cover-video--description #{featured.description}
+
+    a(href="#open-video", title="Assista o vídeo de "+featured.title+" no "+featured.category.name+" do "+siteName).play-button 
+      img(src="img/play-button.svg", alt="Ícone de Play")
+
+  .row
+    include partners.pug
