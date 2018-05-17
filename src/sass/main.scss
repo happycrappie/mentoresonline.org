@@ -1,5 +1,27 @@
 // Set up
-@import 'vars';
-@import 'wipe';
-@import 'setup';
+@import 
+  'vars',
+  'wipe',
+  'fonts',
+  'setup',
 
+// Components
+  'components/logo',
+  'components/nav',
+  'components/button',
+
+// Sections
+  'sections/header',
+  'sections/footer',
+  'sections/cover',
+
+// Templates
+  'templates/default',
+  'templates/video-page',
+
+// Views
+  'views/home',
+  'views/series',
+  'views/sobre',
+  // 'views/video',
+  'views/apoie-o-projeto';
