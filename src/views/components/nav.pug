@@ -1,0 +1,27 @@
+nav#nav(class="nav" + (darkBG ? " --white" : " --black"))
+  -
+    var navLinks = [
+      {
+        title: "Home",
+        url: "/",
+      }, {
+        title: "Séries",
+        url: "/series",
+      }, {
+        title: "Recursos",
+        url: "/recursos",
+      }, {
+        title: "Sobre",
+        url: "/sobre-o-projeto",
+      }, {
+        title: "Apoie o projeto",
+        url: "/apoie-o-projeto",
+        button: true,
+      }
+    ];
+  
+  mixin nav-links(link)
+    a(href=link.url, title=link.title + " " + siteName, class=link.button ? "nav--link" : "button --red")= link.title
+
+  for link in navLinks
+    +nav-links(link)
