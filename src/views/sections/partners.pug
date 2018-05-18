@@ -1,5 +1,7 @@
-section#partners.partners
-  h3.partners--title Quem nos ajuda a inspirar pessoas
-  ul.partners--logos
-    li.partner--logo
-      img(src="img/partners/clinks.svg", alt="Logo tipo do parceiro: Clinks")
+if partners
+  section#partners.partners
+    h3.partners--title Quem nos ajuda a inspirar pessoas
+    ul.partners--logos
+      each partner in partners
+        li.partner--logo
+          img(src=partner.img, alt="Logo tipo do parceiro: " + partner.name)
