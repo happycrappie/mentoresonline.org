@@ -1,0 +1,37 @@
+.quote {
+  min-height: 400px;
+  height: 100vh;
+  max-height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 calc((100vw - 1100px) / 2);
+
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  
+  .quote-message {
+    width: 60%;
+
+    &--text {
+      display: block;
+
+      font-family: $font-family--quote;
+      font-size: 1.8rem;
+      font-weight: bolder;
+
+      margin-bottom: 1rem;
+    }
+    &--author {
+      font-family: $font-family--text;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: normal;
+
+      margin-bottom: 2rem;
+    }
+  }
+}

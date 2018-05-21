@@ -1,0 +1,50 @@
+.social-share {
+  display: flex;
+
+  &--icon {
+    width: 20px;
+    height: 22px;
+    object-fit: contain;
+    object-position: center;
+
+    margin-right: 10px;
+
+    filter: grayscale(1) opacity(.4);
+    transition: all 260ms ease;
+  }
+
+  &--text {
+    width: 0;
+    
+    font-family: $font-family--text;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: #bdbdbd;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 260ms ease;
+  }
+
+  &--link {
+    display: flex;
+
+    margin-right: 30px;
+
+    &:hover {
+      img {
+        filter: grayscale(0) opacity(1);
+      }
+      span {
+        width: 85px;
+        
+        visibility: visible;
+        opacity: 1;
+        
+        color: $color--red;
+      }
+    }
+  }
+}
