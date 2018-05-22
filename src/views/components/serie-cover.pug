@@ -1,7 +1,7 @@
 mixin serie-cover(serie)
   article.serie-cover
     .serie-cover--bg(style="background-image: url("+serie.bg+");")
-    a.serie-cover--link(href="/series#" + serie.meta, title="Acesse os vídeos da série " + serie.name)
+    a.serie-cover--link(href="/series#" + serie.meta, title="Acesse os vídeos da série " + serie.name, rel='noopener noreferrer')
       h4.serie-cover--hidden-heading= serie.name
       img.serie-cover--logo(src=serie.img.white, alt="Logo da série " + serie.name)
       p.serie-cover--description= serie.description
