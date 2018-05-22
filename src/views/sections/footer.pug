@@ -1,0 +1,22 @@
+footer#footer.footer
+  section.footer-newsletter
+    h2.footer-newsletter--title Fique por dentro dos nossos lançamentos
+
+    form.footer-newsletter--form
+      fieldset.fieldset
+        .input--container
+          input#name.input--field(name="name", type="text", placeholder="Insira seu nome")
+          label.input--label(for="name") Nome:
+        .input--container
+          input#email.input--field(name="email", type="email", placeholder="Insira seu e-mail")
+          label.input--label(for="email") E-mail:
+        input#submit.input--submit(type="submit", value="Inscreva-se")
+
+  section.footer-bottom
+    .footer-bottom--copyright
+      +logo(siteLogo.white)
+      p ©2018. Todos os direitos reservados.
+
+    .footer-bottom--social
+      each social in siteSocials
+        +socialShare(social)
