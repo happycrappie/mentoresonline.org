@@ -4,9 +4,11 @@
   justify-content: center;
   align-items: center;
 
-  margin: 5rem auto 10rem;
+  margin: auto;
+  padding-top: 5rem;
   padding-right: calc((100vw - 1100px) / 2);
   padding-left: calc((100vw - 1100px) / 2);
+  padding-bottom: 8rem;
 
   &--title {
     font-family: $font-family--title;
