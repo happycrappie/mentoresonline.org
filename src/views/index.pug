@@ -1,29 +1,17 @@
-<!DOCTYPE html>
-html
-  include includes/vars.pug
+extends templates/default.pug
 
-   -
+block pageVars
+  -
     var page = {
-
+      name: "Home"
     }
+  - var darkBG = true;
 
-  include includes/head.pug
-  include includes/data.pug
-  include includes/components.pug
-
-  body
-
-    main#home.page
-      - var darkBG = true;
-
-      include sections/header.pug
-      include sections/cover.pug
-      section#homeContent.home-content
-        include sections/featured-videos.pug
-        include sections/quote.pug
-        include sections/series-categories.pug
-        include sections/supporters.pug
-      include sections/footer.pug  
-
-    include includes/scripts.pug
-    
+block content
+  main#home.page
+    include sections/cover.pug
+    section#homeContent.home-content
+      include sections/featured-videos.pug
+      include sections/quote.pug
+      include sections/series-categories.pug
+      include sections/supporters.pug
