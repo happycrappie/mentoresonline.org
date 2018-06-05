@@ -35,7 +35,7 @@ var src = {
   css: srcRoot + 'sass/',
   mail: srcRoot + 'mail/',
   views: srcRoot + 'views/',
-  videos: srcRoot + 'videos/',
+  videos: srcRoot + 'views/videos/',
   assets: srcRoot + 'assets/',
 };
 
