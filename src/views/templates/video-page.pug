@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+html
+  include ../includes/vars.pug
+  include ../includes/data.pug
+  block pageVars
+  include ../includes/head.pug
+  include ../includes/components.pug
+  
+  - var isVideoPage = true;
+
+  body
+    include ../sections/header.pug
+
+    main#video.page
+      //- include ../sections/cover.pug
+      +cover(page.video, page.video.meta)
+
+      section#transcricao.video-content
+        h2.video-content--title Transcrição do Vídeo
+
+        .video-contents
+          article.video-transcription
+            .row
+              .col
+                h2.video-transcription--title Pergunta número um
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+              .col
+                h2.video-transcription--title Pergunta número dois
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+            .row
+              h3.video-transcription--quote
+                | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ipsum de apto ip sumi dlo thi wisd.
+            .row
+              .col
+                h2.video-transcription--title Pergunta número um
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+              .col
+                h2.video-transcription--title Pergunta número dois
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+                p.video-transcription--text
+                  | Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. Lorem ipsum de apto ip sumi dlo thi wisd lor amidp adapt ma fait yuwv lorem. 
+
+          aside.video-info
+            .video-info-profile
+              figure.video-info-profile--pic
+                img(src="/img/profile/profile-pic--wendell-carvalho.png", alt="")
+              h4.video-info-profile--author Wendell Carvalho
+              h5.video-info-profile--title Palestrante e Escritor
+              p.video-info-profile--quote "Tudo começou quando eu. Tudo começou quando eu. Tudo começou quando eu. Tudo começou quando eu."
+              nav.video-info-profile--social
+                if profiles.wendellcarvalho.socials
+                  each social in profiles.wendellcarvalho.socials
+                    a(href="", title="title").video-info-profile--social-link 
+                      img(src="/img/icons/icon-share--" + social.name + ".svg", alt=social.name)
+
+    include ../sections/footer.pug  
+
+    block scripts
+      include ../includes/scripts.pug
