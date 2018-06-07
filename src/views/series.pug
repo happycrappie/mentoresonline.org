@@ -20,16 +20,16 @@ block content
       each category in categories 
         a(href="#" + category.meta, title="Listar videos do " + category.name, class=firstCat? "series-category active" : "series-category")
           h3.series-category--title #{category.name}
-          img.series-category--logo(src=category.img.black, alt=category.name)
+          img.series-category--logo(src="/img/logos/logo-serie--" + category.images.logo.black + ".svg", alt=category.name)
         - firstCat = false;
     
     section.series-videos
       - var firstCat = true; 
       each category in categories
         section(id=category.meta, class=firstCat ? "video-list active" : "video-list")
-          - for (var i = 0; i < videosLength; i++)
-            if videosList[i].category.meta == category.meta
-              +videoCard(videosList[i])
+          - for (var i = 0; i < videosArray.length; i++)
+            if videosArray[i].category.meta == category.meta
+              +videoCard(videosArray[i])
         - firstCat = false;
 
 

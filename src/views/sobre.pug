@@ -33,7 +33,7 @@ block content
         each category in categories
           .category-info(id=category.meta + "-info")
             h4.category-info--title= category.name
-            img(src=category.img.black, alt=category.name + " no " + siteName).category-info--logo
+            img(src="/img/logos/logo-serie--" + category.images.logo.black + ".svg", alt=category.name + " no " + siteName).category-info--logo
             p.category-info--description= category.description
 
         a(href="/series.html", title="Link para acessar o catálogo de vídeos").sobre-categorias--link Acesse o nosso catálogo
