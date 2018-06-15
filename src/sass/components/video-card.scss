@@ -134,6 +134,16 @@
     z-index: 2;
   }
 
+  &--link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    z-index: 100;
+  }
+
   &:hover {
     transform: scale(1.2);
 
