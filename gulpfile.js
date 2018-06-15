@@ -216,7 +216,10 @@ gulp.task('build', ['ship_critical', 'js', 'img', 'move', 'fonts']);
 
 // View Task
 gulp.task('build_views', function () {
-  return gulp.src(src.views + '*.pug')
+  return gulp.src([
+      src.views + '*.pug',
+      src.views + 'pages/**/*.pug',
+    ])
     .pipe(plumber())
     .pipe(pug({
       doctype: 'html',
