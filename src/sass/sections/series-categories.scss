@@ -3,19 +3,18 @@
   padding-left: calc((100vw - 1300px) / 2);
 
   &--title {
-    font-family: $font-family--title;
-    font-size: 4.5rem;
-    font-weight: 800;
+    @extend %title;
+    @extend %--medium;
+    
     line-height: 1;
     text-align: center;
-    text-transform: uppercase;
 
     margin-bottom: 1rem;
   }
 
   &--subtitle {
     font-family: $font-family--text;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.4;
     text-align: center;

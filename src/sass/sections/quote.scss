@@ -18,10 +18,10 @@
 
     &--text {
       display: block;
-
-      font-family: $font-family--quote;
-      font-size: 1.8rem;
-      font-weight: bolder;
+      
+      @extend %quote;
+      @extend %--medium;
+      @extend %--dark;
 
       margin-bottom: 1rem;
     }

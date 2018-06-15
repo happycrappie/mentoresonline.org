@@ -10,20 +10,21 @@
 
  %description {
   font-family: $font-family--text;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
 
   /*
    * SIZES
    */
-  &%--big { font-size: 1rem; }
+  &%--big { font-size: 1.2rem; }
   &%--medium { font-size: 1rem; }
-  &%--normal { font-size: 1rem; }
-  &%--small { font-size: 1rem; }
+  &%--normal { font-size: .9rem; }
+  &%--small { font-size: .75rem; }
+  &%--x-small { font-size: .65rem; }
 
   /* 
    *  COLORS 
    */
   &%--dark { color: black; }
-  &%--light { color: rgba(white,.8); }
+  &%--light { color: white; }
 }

@@ -60,5 +60,10 @@
     @extend %description;
     @extend %--normal;
     @extend %--light;
+
+    font-weight: 500;
+    line-height: 1.6;
+
+    opacity: .8;
   }
 }

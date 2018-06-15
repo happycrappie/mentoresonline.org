@@ -93,18 +93,20 @@
     color: white;
 
     &--title {
-      font-family: $font-family--title;
-      font-size: 1.4rem;
-      font-weight: 800;
+      @extend %title;
+      @extend %--small;
+      @extend %--light;
+
       line-height: 1;
-      text-transform: uppercase;
 
       margin-bottom: 5px;
     }
 
     &--extra {
-      font-family: $font-family--text;
-      font-size: .75rem;
+      @extend %description;
+      @extend %--small;
+      @extend %--light;
+
       font-weight: 600;
       line-height: 1;
 
@@ -116,10 +118,11 @@
     }
 
     &--description {
-      font-family: $font-family--text;
-      font-size: .75rem;
+      @extend %description;
+      @extend %--small;
+      @extend %--light;
+
       font-weight: 500;
-      line-height: 1.2;
 
       opacity: .8;
     }

@@ -11,14 +11,13 @@
     align-items: center;
 
     &--title {
-      font-family: $font-family--title;
-      font-size: 1.6rem;
+      @extend %title;
+      @extend %--normal;
+      @extend %--light;
+
       font-weight: 700;
-      text-transform: uppercase;
 
       margin-bottom: 1rem;
-
-      color: white;
     }
 
     &--form {

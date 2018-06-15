@@ -15,21 +15,21 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    text-align: center;
+
     &--title {
-      font-family: $font-family--title;
-      font-size: 5rem;
-      font-weight: 800;
-      text-align: center;
-      text-transform: uppercase;
+      @extend %title;
+      @extend %--big;
+      @extend %--dark;
+
+      margin-bottom: 1rem;
     }
+
     &--subtitle {
-      font-family: $font-family--text;
-      font-size: 1.2rem;
-      text-align: center;
+      @extend %subtitle;
+      @extend %--dark;
 
       margin-bottom: 2rem;
-      
-      color: $color--gray;
     }
   }
 
@@ -43,13 +43,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    &--text {
-      font-family: $font-family--text;
-      font-size: 1.4rem;
-      text-align: center;
-      line-height: 2;
+    text-align: center;
 
-      color: white;
+    &--text {
+      @extend %text;
+      @extend %--medium;
+      @extend %--light;
+      @extend %--line-spacy;
 
       span {
         color: $color--red;
@@ -83,23 +83,22 @@
     }
 
     &--title {
-      font-family: $font-family--title;
-      font-size: 4rem;
-      font-weight: 800;
-      text-align: center;
-      text-transform: uppercase;
+      @extend %title;
+      @extend %--medium;
+      @extend %--dark;
 
-      margin: 0 calc((100vw - 1000px) / 2);
+      text-align: center;
+
+      margin: 0 calc((100vw - 1000px) / 2) 1rem;
     }
     &--subtitle {
-      font-family: $font-family--text;
-      font-size: 1.2rem;
+      @extend %subtitle;
+      @extend %--dark;
+
       text-align: center;
       
       margin: 0 calc((100vw - 1000px) / 2);
       margin-bottom: 2rem;
-      
-      color: $color--gray;
     }
 
     &--list {
@@ -130,7 +129,7 @@
       }
 
       &--description {
-        font-weight: 500;
+        font-weight: 400;
         color: $color--gray;
       }
     }
@@ -159,9 +158,9 @@
       &--text {
         display: block;
 
-        font-family: $font-family--quote;
-        font-size: 2.4rem;
-        font-weight: bold;
+        @extend %quote;
+        @extend %--big;
+
         line-height: 1.4;
         
         margin-bottom: 1.4rem;

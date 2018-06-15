@@ -10,17 +10,16 @@
     text-align: center;
 
     &--title {
-      font-family: $font-family--title;
-      font-size: 5rem;
-      font-weight: 800;
-      text-transform: uppercase;
+      @extend %title;
+      @extend %--big;
+      @extend %--dark;
+
+      margin-bottom: 1rem;
     }
 
     &--subtitle {
-      font-family: $font-family--text;
-      font-size: 1.2rem;
-
-      color: $color--gray;
+      @extend %subtitle;
+      @extend %--dark;
     }
   }
 
