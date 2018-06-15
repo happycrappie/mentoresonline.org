@@ -28,3 +28,5 @@ mixin videoCard(video)
         if video.episode
           span Episódio #{video.episode}
       p.video-card-info--description #{video.description}
+
+    a(href="/" + video.category.meta + "/" + video.meta, title="Assista o vídeo " + video.title + " no Mentores Online").video-card--link 
