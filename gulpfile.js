@@ -61,7 +61,10 @@ var build = {
 
 // View Task
 gulp.task('views', function () {
-  return gulp.src(src.views + '*.pug')
+  return gulp.src([
+    src.views + '*.pug', 
+    src.views + 'pages/**/*.pug'
+    ])
     .pipe(plumber())
     .pipe(pug({
       pretty: true
