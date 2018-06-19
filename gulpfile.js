@@ -146,7 +146,7 @@ gulp.task('js', function (cb) {
 gulp.task('move', function () {
   return gulp.src([
     srcRoot + '*.ico', 
-    srcRoot + 'favicon/*', 
+    src.assets + 'favicon/*', 
     srcRoot + '.htaccess',
   ])
     .pipe(gulp.dest(buildRoot))
