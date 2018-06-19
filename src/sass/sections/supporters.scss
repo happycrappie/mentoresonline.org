@@ -21,10 +21,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
   }
 }
 
 .supporter--logo {
   max-width: 90px;
   margin: 2rem 2rem;
+
+  img {
+    opacity: .7;
+  }
 }
