@@ -6,11 +6,12 @@
 //-    RECEIVES:
 //-    * video {Object} – The specific video object from [VIDEOS] or [FEATURED] Object. 
 //-    * meta {String} – If present, should receive the page's meta. If not, will show the video meta from the video object.
+//-    * isFeatured {bool} – If true, will get image from featured folder, if not, will get from Cover folder.
 //-
 //-----------------------------------------
 
-mixin cover(video, meta)
-  section.featured.cover(id=(meta ? meta : video.meta) + "-cover", style="background-image: url(/img/featured/featured-bg--" + video.images.cover + ".jpg);")
+mixin cover(video, meta, isFeatured)
+  section.featured.cover(id=(meta ? meta : video.meta) + "-cover", style=(isFeatured ? "background-image: url(/img/featured/featured-bg--" : "background-image: url(/img/covers/cover-bg--") + video.images.cover + ".jpg);")
     .row
       article.cover-video
         figure.cover-video--category
