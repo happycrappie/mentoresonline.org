@@ -1,6 +1,8 @@
 .footer {
 
-  padding: 5rem calc((100vw - 1300px) / 2);
+  @extend %padding;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 
   background: radial-gradient(212.50px at 50% 50%, #141517 0%, #070707 100%);
 

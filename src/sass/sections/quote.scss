@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding: 0 calc((100vw - 1100px) / 2);
+  @extend %padding;
 
   background-size: contain;
   background-position: top right;

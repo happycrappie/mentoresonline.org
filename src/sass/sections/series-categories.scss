@@ -1,6 +1,5 @@
 .series-categories {
-  padding-right: calc((100vw - 1300px) / 2);
-  padding-left: calc((100vw - 1300px) / 2);
+  @extend %padding;
 
   &--title {
     @extend %title;

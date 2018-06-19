@@ -8,14 +8,17 @@
 
   width: 100%;
 
-  padding: 2em calc((100vw - 1300px) / 2);
+  @extend %padding;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
   .logo + .logo { display: none; }
   
   &.--scrolled {
     position: fixed;
     
-    padding: 1em calc((100vw - 1300px) / 2);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     
     background-color: white;
     box-shadow: 0 12px 24px rgba(black, .12);
