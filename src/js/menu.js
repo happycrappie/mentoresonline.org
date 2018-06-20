@@ -21,8 +21,10 @@ const openNavButton = document.getElementById('openNav');
 const toggleMobileNav = () => {
   if ( hasClass(header, 'active') ) {
     removeClass(header, 'active');
+    openNavButton.textContent = "Menu";
   } else {
     addClass(header, 'active');
+    openNavButton.textContent = "Fechar";
   }
 }
 
