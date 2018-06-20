@@ -12,9 +12,26 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
 
+  .logo,
+  &-mobile-button {
+    z-index: 3;
+  }
+
+
   .logo + .logo { display: none; }
+
+  &-mobile-button {
+    display: none;
+  }
+
+  @media screen and (max-width: 767px) {
+    &-mobile-button {
+      display: block;
+    }
+  }
   
-  &.--scrolled {
+  &.--scrolled,
+  &.active {
     position: fixed;
     
     padding-top: 1rem;
