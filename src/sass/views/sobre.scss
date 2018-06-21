@@ -16,19 +16,33 @@
 
     text-align: center;
 
+    @media screen and (max-width: 480px) {
+      padding-top: 160px;
+    }
+
     &--title {
       @extend %title;
       @extend %--big;
       @extend %--dark;
 
       margin-bottom: 1rem;
-    }
 
+      @media screen and (max-width: 480px) {
+        font-size: 2.4rem;
+
+        margin-bottom: .4rem;
+      }
+    }
+    
     &--subtitle {
       @extend %subtitle;
       @extend %--dark;
-
+      
       margin-bottom: 2rem;
+      
+      @media screen and (max-width: 480px) {
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -67,6 +81,11 @@
 
     background: radial-gradient(1969.54px at 50% 23.06%, #FFFFFF 0%, #F2F5F7 100%);
 
+    @media screen and (max-width: 767px) {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
     #videoCardBG {
       position: absolute;
       
@@ -80,6 +99,11 @@
       background-position: right;
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media screen and (max-width: 767px) {
+        visibility: hidden;
+        opacity: 0;
+      }
     }
 
     &--title {
@@ -106,15 +130,29 @@
       max-width: 50%;
       
       padding: 100px 0;
+
+      @media screen and (max-width: 767px) {
+        max-width: 95%;
+
+        padding: 30px 0;
+      }
     }
 
     &--link {
-      font-size: 1.1rem;
-      font-weight: 600;
+      @extend .button;
+      @extend .--red;
+
+      @media screen and (max-width: 767px) {
+        font-size: .9rem;
+      }
     }
 
     .category-info {
       margin-bottom: 2rem;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 3rem;
+      }
 
       &--title {
         position: absolute;
