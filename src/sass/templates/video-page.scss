@@ -29,10 +29,12 @@
   
   .video-transcription {
     width: 100%;
-    max-width: 70%;
+    max-width: calc(70% - 1rem);
+    margin-right: 1rem;
     
     @media screen and (max-width: 1024px) {
       max-width: 100%;
+      margin-right: 0;
     }
     
     .row {
@@ -42,9 +44,13 @@
     }
     
     .col {
-      &:nth-of-type(odd) { padding-right: 15px; }
-      &:nth-of-type(even) { padding-left: 15px; }
+      &:nth-of-type(odd) { padding-right: 35px; }
+      &:nth-of-type(even) { padding-left: 35px; }
       
+      @media screen and (max-width: 1024px) {
+        &:nth-of-type(odd) { padding-right: 20px; }
+        &:nth-of-type(even) { padding-left: 20px; }
+      }  
       @media screen and (max-width: 767px) {
         &:nth-of-type(odd),
         &:nth-of-type(even) {
@@ -53,7 +59,8 @@
       }  
     }
 
-    &--title {
+    &--title,
+    h2 {
       font-family: $font-family--title;
       font-size: 1.4rem;
       font-weight: 700;
@@ -63,12 +70,25 @@
       margin-bottom: .6rem;
     }
 
-    &--text {
+    &--text,
+    p {
       font-family: $font-family--text;
       font-size: 1rem;
+      text-align: justify;
+
+      margin-bottom: .6rem;
+
+      &:first-child {
+        margin-top: 4.4rem;
+
+        @media screen and (max-width: 767px) {
+          margin-top: 0;
+        }
+      }
     }
 
-    &--quote {
+    &--quote,
+    h3 {
       position: relative;
 
       width: 100%;
