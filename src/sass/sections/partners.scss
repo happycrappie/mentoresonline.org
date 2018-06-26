@@ -1,0 +1,33 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+
+  &--title {
+    @extend %pre-title;
+    @extend %--normal;
+    @extend %--light;
+  }
+  &--logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.partner--logo {
+  max-width: 100px;
+  margin: 1rem 2rem;
+  
+  img {
+    opacity: .7;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 90px;
+  }
+}

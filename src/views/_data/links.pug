@@ -1,0 +1,64 @@
+//-----------------------------------------
+//-    LINKS DATABASE
+//-    Type: Mother
+//- 
+//-    This database will hold information about each link or social network, like URLs and names to use on loops.
+//-
+//-   LINKS OBJECT: [LINK Objects]
+//-
+//-----------------------------------------
+//- 
+//-   LINK OBJECT:
+//-   * Meta: Key ID
+//-   * Name: Name of the link/social Network
+//-   * URL: The URL of the link/social network without a handle.
+//-   * Icon: The Icon's path for that link.
+//- 
+//-----------------------------------------
+
+-
+  var links = {
+    "facebook": {
+      "meta": "facebook",
+      "name": "Facebook",
+      "url": "https://facebook.com/",
+    },
+    "youtube": {
+      "meta": "youtube",
+      "name": "Youtube",
+      "url": "https://facebook.com/",
+    },
+    "instagram": {
+      "meta": "instagram",
+      "name": "Instagram",
+      "url": "https://instagram.com/",
+    },
+    "twitter": {
+      "meta": "twitter",
+      "name": "Twitter",
+      "url": "https://twitter.com/",
+    },
+    "linkedin": {
+      "meta": "linkedin",
+      "name": "linkedin",
+      "url": "https://linkedin.com/in/",
+    },
+    "pinterest": {
+      "meta": "pinterest",
+      "name": "pinterest",
+      "url": "https://pinterest.com/",
+    },
+    "website": {
+      "meta": "website",
+      "name": "Website",
+      "url": "https://",
+    },
+  }
+
+//-----------------------------------------
+//-   LINKS ARRAY
+//- 
+//-   Mainly used for looping through the object.
+//-----------------------------------------
+
+- var linksArray = Object.values(links)

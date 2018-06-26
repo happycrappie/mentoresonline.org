@@ -1,0 +1,39 @@
+/* 
+ * ------------------ 
+ *    PRE TITLE
+ * ------------------ 
+ * 
+ *    This is the style used for titling sections that don't need a big title. 
+ *    - Supporters & Partners sections
+ *
+ */
+
+
+%pre-title {
+  font-family: $font-family--title;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
+  opacity: .7;
+  
+  /*
+   * SIZES
+   */
+  &%--big { font-size: 1rem; }
+  &%--normal { font-size: .7rem; }
+
+  @media screen and (max-width: 767px) {
+    &%--big { font-size: .9rem; }
+    &%--normal { font-size: .6rem; }
+  }
+
+  /* 
+   *  COLORS 
+   */
+  &%--dark { color: black; }
+  &%--light { color: white; }
+}

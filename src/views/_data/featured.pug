@@ -1,0 +1,17 @@
+//-----------------------------------------
+//-     FEATURED DATABASE
+//-     Type: Child
+//- 
+//-     This database references the Videos Database to collect useful information about which videos to display as featured.
+//-
+//-    FEATURED OBJECT: 
+//-    * Cover: REF. specific [VIDEOS] Object
+//-    * Recent: REF. [VIDEOS] Object
+//-
+//-----------------------------------------
+
+-
+  var featured = {
+    "cover": videos.wendellcarvalho, /* - Video referenced from: /views/_data/videos.pug */
+    "recent": videos, /* - Videos referenced from: /views/_data/videos.pug */
+  }

@@ -1,0 +1,70 @@
+.header {
+  position: absolute;
+  z-index: 999;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  @extend %padding;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  .logo,
+  &-mobile-button {
+    z-index: 3;
+  }
+
+  .logo + .logo { display: none; }
+
+  &-mobile-button {
+    display: none;
+
+    font-family: $font-family--text;
+    font-size: .7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    
+    &.--white { color: white; }
+    &.--black { color: black; }
+  }
+
+  @media screen and (max-width: 767px) {
+    &-mobile-button {
+      display: block;
+    }
+
+    .logo {
+      max-width: 200px;
+    }
+  }
+  
+  &.--scrolled,
+  &.active {
+    position: fixed;
+    
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    
+    background-color: white;
+    box-shadow: 0 12px 24px rgba(black, .12);
+    
+    animation: slideIn ease 1;
+    animation-fill-mode: forwards;
+    animation-duration: 260ms;
+
+    .logo {
+      &.white { display: none; }
+      &.black { display: block; }
+    }
+
+    .nav,
+    .header-mobile-button {
+      color: black;
+    }
+  }
+}

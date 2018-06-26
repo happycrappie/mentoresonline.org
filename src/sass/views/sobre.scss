@@ -1,0 +1,224 @@
+#sobre.page {
+
+  .sobre-cover {
+    min-height: 700px;
+    height: 100vh;
+    max-height: 900px;
+
+    @extend %padding;
+    padding-top: 180px;
+
+    background: radial-gradient(1969.54px at 50% 23.06%, #FFFFFF 0%, #F2F5F7 100%);
+    background: url(/img/page-sobre/about-page-bg--cover.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      padding-top: 160px;
+    }
+
+    &--title {
+      @extend %title;
+      @extend %--big;
+      @extend %--dark;
+
+      margin-bottom: 1rem;
+
+      @media screen and (max-width: 480px) {
+        font-size: 2.4rem;
+
+        margin-bottom: .4rem;
+      }
+    }
+    
+    &--subtitle {
+      @extend %subtitle;
+      @extend %--dark;
+      
+      margin-bottom: 2rem;
+      
+      @media screen and (max-width: 480px) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .sobre-projeto {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+
+    @extend %padding;
+    @extend %--x-small;
+
+    background-image: url('/img/page-sobre/about-page-bg--about.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    &--text {
+      @extend %text;
+      @extend %--medium;
+      @extend %--light;
+      @extend %--line-spacy;
+
+      span {
+        color: $color--red;
+      }
+    }
+  }
+
+  .sobre-categorias {
+    position: relative;
+
+    @extend %padding;
+    padding-top: 160px;
+    padding-bottom: 100px;
+
+    background: radial-gradient(1969.54px at 50% 23.06%, #FFFFFF 0%, #F2F5F7 100%);
+
+    @media screen and (max-width: 767px) {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    #videoCardBG {
+      position: absolute;
+      
+      top: 310px;
+      right: 0;
+      bottom: 0;
+      left: 60%;
+      z-index: 0;
+
+      background: url('/img/page-sobre/about-page-bg--videos-cut.png');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media screen and (max-width: 767px) {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &--title {
+      @extend %title;
+      @extend %--medium;
+      @extend %--dark;
+
+      text-align: center;
+
+      @extend %margin;
+      margin-bottom: 1rem;
+    }
+    &--subtitle {
+      @extend %subtitle;
+      @extend %--dark;
+
+      text-align: center;
+      
+      @extend %margin;
+      margin-bottom: 2rem;
+    }
+
+    &--list {
+      max-width: 50%;
+      
+      padding: 100px 0;
+
+      @media screen and (max-width: 767px) {
+        max-width: 95%;
+
+        padding: 30px 0;
+      }
+    }
+
+    &--link {
+      @extend .button;
+      @extend .--red;
+
+      @media screen and (max-width: 767px) {
+        font-size: .9rem;
+      }
+    }
+
+    .category-info {
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: 3rem;
+      }
+
+      &--title {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        left: -999999px;
+      }
+      
+      &--logo {
+        max-width: 180px;
+
+        margin-bottom: 1rem;
+      }
+
+      &--description {
+        font-weight: 400;
+        color: $color--gray;
+      }
+    }
+  }
+
+  .sobre-quote {
+    @extend %padding;
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    background: url('/img/page-sobre/about-page-bg--quote.jpg');
+    background-size: cover;
+    background-position: center;
+
+    &-message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      color: white;
+
+      &--text {
+        display: block;
+
+        @extend %quote;
+        @extend %--big;
+
+        line-height: 1.4;
+        
+        margin-bottom: 1.4rem;
+      }
+
+      &--author {
+        font-family: $font-family--text;
+        font-size: 1rem;
+        font-weight: 600;
+        font-style: normal;
+        
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.sobre-page {
+  .nav .nav--link:nth-child(3) {
+    color: $color--red;
+    border-bottom-color: rgba($color--red, .4);
+  }
+}

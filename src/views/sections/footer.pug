@@ -1,0 +1,34 @@
+footer#footer.footer
+  section.footer-newsletter
+    h2.footer-newsletter--title Fique por dentro dos nossos lançamentos
+
+    form#form.footer-newsletter--form(
+      action="http://mentoresonline.us18.list-manage.com/subscribe/post-json?u=8ad270f987210af8475830e48&id=543059c049&c=callback", method="post", name="mc-embedded-subscribe-form", target="_blank", no-validate="true")
+
+      //- Honeypot
+      div(style="position: absolute; left: -5000px;", aria-hidden="true")
+        input#this-is-a-name(type="text", name="b_8ad270f987210af8475830e48_543059c049", tabindex="-1", value="")
+
+      #js-form-inputs.input--group(style="color: white;")
+        .input--container
+          label.input--label(for="mce-FNAME") Nome:
+          input#mce-FNAME.input--field(name="FNAME", type="text", placeholder="Insira seu nome", required)
+          .error-message
+        .input--container
+          label.input--label(for="mce-EMAIL") E-mail:
+          input#mce-EMAIL.input--field(name="EMAIL", type="email", placeholder="Insira seu e-mail", required)
+          .error-message
+        input#submit.input--submit(type="submit", value="Inscreva-se")
+
+      #js-subscribe-response.form-confirmation-message
+
+  section.footer-bottom
+    .footer-bottom--copyright
+      +logo(siteLogo.white)
+      p ©2018. Todos os direitos reservados.
+
+    .footer-bottom--social
+      each social in siteSocials
+        +socialShare(social)
+
+include ../includes/footer.pug

@@ -1,0 +1,19 @@
+head
+  title #{siteName} | #{siteQuote}
+
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+  include sharing.pug
+  include favicon.pug
+
+  link(href="https://fonts.googleapis.com/css?family=Barlow+Condensed:700,800|Playfair+Display:900",rel="stylesheet")
+  link(href="/css/main.css", rel="stylesheet")
+
+  //-------------------------------
+  //-------- ANALYTICS ------------
+  //-------------------------------
+  include analytics/fbpixel.pug
+  include analytics/gtag.pug
+  

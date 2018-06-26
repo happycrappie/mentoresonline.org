@@ -1,0 +1,36 @@
+/* 
+ * ------------------ 
+ *    QUOTE
+ * ------------------ 
+ * 
+ *    This is the style used across the websites for Quotes 
+ *    - Quote Section
+ *
+ */
+
+%quote {
+  font-family: $font-family--quote;
+  font-weight: 1.8rem;
+  font-weight: bolder;
+
+  /*
+   * SIZES
+   */
+  &%--big { font-size: 2.4rem; }
+  &%--medium { font-size: 1.8rem; }
+  &%--normal { font-size: 1.4rem; }
+  &%--small { font-size: 1rem; }
+  
+  @media screen and (max-width: 767px) {
+    &%--big { font-size: 1.8rem; }
+    &%--medium { font-size: 1.4rem; }
+    &%--normal { font-size: 1.2rem; }
+    &%--small { font-size: .9rem; }
+  }
+
+  /* 
+   *  COLORS 
+   */
+  &%--dark { color: black; }
+  &%--light { color: white; }
+}

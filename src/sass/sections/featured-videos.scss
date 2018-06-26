@@ -1,0 +1,35 @@
+.featured-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: -8rem;
+  @extend %padding;
+
+  @media screen and (max-width: 768px) {
+    margin-top: -7rem;
+
+    .video-card:not(:nth-child(-n+4)) {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .video-card:not(:nth-child(-n+2)) {
+      display: none;
+    }
+  }
+
+  .video-card {
+    max-width: calc(33% - 1rem);
+
+    @media screen and (max-width: 768px) {
+      max-width: calc(50% - 1rem);
+    }
+    
+    @media screen and (max-width: 480px) {
+      max-width: 100%;
+    }
+  }
+}

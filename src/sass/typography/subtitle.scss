@@ -1,0 +1,26 @@
+/* 
+ * ------------------ 
+ *    SUB TITLE
+ * ------------------ 
+ * 
+ *    This is the style used for texts that complement the Title. 
+ *    - Section sub-titles
+ *
+ */
+
+%subtitle {
+  font-family: $font-family--text;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+
+  /* 
+   *  COLORS 
+   */
+  &%--dark { color: $color--gray; }
+  &%--light { color: rgba(white, .8); }
+
+  @media screen and (max-width: 767px) {
+    font-size: .9rem;
+  }
+}

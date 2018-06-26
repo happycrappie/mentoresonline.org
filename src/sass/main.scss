@@ -1,0 +1,41 @@
+// Set up
+@import 
+  'vars',
+  'wipe',
+  'fonts',
+  'setup',
+  'grid',
+  'typography',
+  'animations',
+
+// Components
+  'components/logo',
+  'components/nav',
+  'components/button',
+  'components/form',
+  'components/scroll-down',
+  'components/play-button',
+  'components/video-card',
+  'components/serie-cover',
+  'components/social-share',
+  'components/cover',
+
+// Sections
+  'sections/header',
+  'sections/footer',
+  'sections/partners',
+  'sections/featured-videos',
+  'sections/series-categories',
+  'sections/quote',
+  'sections/supporters',
+
+// Templates
+  'templates/default',
+  'templates/video-page',
+
+// Views
+  'views/home',
+  'views/series',
+  'views/sobre',
+  // 'views/video',
+  'views/apoie-o-projeto';

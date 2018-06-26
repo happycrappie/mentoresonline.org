@@ -1,0 +1,114 @@
+form {
+
+  .input {
+
+    &--group {
+      display: flex;
+    }
+
+    &--container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      width: 100%;
+
+      padding: 10px;
+
+      .error-message {
+        font-size: .85rem;
+        font-weight: 500;
+
+        padding-left: 25px;
+        padding-top: 5px;
+        
+        color: yellow;
+
+        visibility: hidden;
+        opacity: 0;
+        
+        @media screen and (min-width: 500px) {
+          position: absolute;
+          bottom: -20px;
+        }
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+
+    &--label {
+      font-family: $font-family--text;
+      font-size: .8rem;
+
+      margin-left: 22px;
+
+      color: rgba(white,.8);
+    }
+    &--field {
+      width: 100%;
+      
+      font-family: $font-family--text;
+      font-size: .9rem;
+      line-height: 1.2;
+
+      padding: 10px 22px;
+
+      border-radius: 30px;
+      border: 1px solid rgba(white,.6);
+      color: white;
+
+      transition: all 260ms ease;
+
+      &:placeholder {
+        font-size: .9rem;
+        line-height: 1;
+      }
+      
+      &:hover {
+        border-color: rgba(white, .8);
+        background-color: rgba(white, .3);
+      }
+
+      &:focus,
+      &:active {
+        color: black;
+        border-color: white;
+        background-color: white;
+      }
+    }
+
+    &--submit{
+      max-height: 43px;
+      margin: auto auto 10px 10px;
+
+      @extend .button;
+      @extend .--red;
+    }
+  }
+
+  .form-confirmation-message {
+    margin: 1rem;
+    padding: 1rem;
+
+    font-size: .85rem;
+    font-weight: 500;
+
+    background-color: rgba(white,.2);
+    color: white;
+
+    transition: all 260ms ease;
+
+    &:empty { 
+      visibility: hidden; 
+      opacity: 0;
+    }
+
+    @media screen and (min-width: 500px) {
+      max-width: 80%;
+      margin: 1rem auto;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+:root {
+  font-family: $font-family--text;
+  font-size: 18px;
+  font-kerning: normal;
+}
+
+body {
+  font-family: $font-family--text;
+}
+
+.page > section:first-of-type {
+  padding-top: 90px;
+}

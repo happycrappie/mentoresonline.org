@@ -1,0 +1,36 @@
+.supporters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+  // padding-right: calc((100vw - 1100px) / 2);
+  // padding-left: calc((100vw - 1100px) / 2);
+  @extend %padding;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+
+  &--title {
+    @extend %pre-title;
+    @extend %--normal;
+    @extend %--dark;
+
+    opacity: .4;
+  }
+  &--logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.supporter--logo {
+  max-width: 90px;
+  margin: 2rem 2rem;
+
+  img {
+    opacity: .7;
+  }
+}

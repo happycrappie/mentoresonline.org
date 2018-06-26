@@ -1,0 +1,58 @@
+.quote {
+  min-height: 400px;
+  height: 100vh;
+  max-height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @extend %padding;
+
+  background-size: contain;
+  background-position: top right;
+  background-repeat: no-repeat;
+  
+  @media screen and (max-width: 1024px) {
+    background-size: 50%;
+    background-position: 120% 30%;
+  }
+  
+  @media screen and (max-width: 480px) {
+    background-position: 120% 10%;
+  }
+  
+  .quote-message {
+    width: 60%;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+    
+    @media screen and (max-width: 480px) {
+      width: 100%;
+    }
+
+    &--text {
+      display: block;
+      
+      @extend %quote;
+      @extend %--medium;
+      @extend %--dark;
+
+      margin-bottom: 1rem;
+    }
+    &--author {
+      font-family: $font-family--text;
+      font-size: 1rem;
+      font-weight: 600;
+      font-style: normal;
+
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 480px) {
+        font-size: .9rem;
+      }
+    }
+  }
+}

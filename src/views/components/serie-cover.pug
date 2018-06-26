@@ -1,0 +1,20 @@
+//-----------------------------------------
+//-     SERIE COVER COMPONENT
+//- 
+//-     This component displays a card as a Series Cover, with information about the specific Category.
+//- 
+//-    RECEIVES:
+//-    * serie {Object} – Receives the an object, more specifically built to receive the [CATEGORIES] Object.
+//-
+//-----------------------------------------
+
+mixin serie-cover(category)
+  article.serie-cover
+    .serie-cover--bg(style="background-image: url(/img/series-covers/cover-serie--"+category.meta+".jpg);")
+    a.serie-cover--link(href="/series.html#" + category.meta, title="Acesse os vídeos da série " + category.name, rel='noopener noreferrer')
+      h4.serie-cover--hidden-heading= category.name
+      img.serie-cover--logo(src="/img/logos/logo-serie--" + category.images.logo.white + ".svg", alt="Logo da série " + category.name)
+      p.serie-cover--description= category.description
+      button.serie-cover--button
+        | Acessar
+        i.serie-cover--button-icon

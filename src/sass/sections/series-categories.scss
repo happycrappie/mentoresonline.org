@@ -1,0 +1,44 @@
+.series-categories {
+  @extend %padding;
+
+  &--title {
+    @extend %title;
+    @extend %--medium;
+    
+    line-height: 1;
+    text-align: center;
+
+    margin-bottom: 1rem;
+  }
+
+  &--subtitle {
+    font-family: $font-family--text;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-align: center;
+
+    color: $color--gray;
+
+    margin-bottom: 4rem;
+  }
+
+  &--covers {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .serie-cover {
+      width: calc(25% - 2rem);
+      min-height: 430px;
+
+      @media screen and (max-width: 1024px) {
+        width: calc(50% - 2rem);
+        min-height: 240px;
+      }
+      @media screen and (max-width: 767px) {
+        width: calc(100% - 2rem);
+        min-height: 320px;
+      }
+    }
+  }
+}

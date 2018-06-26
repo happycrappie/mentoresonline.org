@@ -1,0 +1,81 @@
+//-----------------------------------------
+//-    CATEGORIES DATABASE
+//-    Type: Mother
+//- 
+//-    This database will hold information about the categories of the series created by Mentores Online.
+//-
+//-   CATEGORIES OBJECT: [CATEGORY Objects]
+//-
+//-----------------------------------------
+//- 
+//-   CATEGORY OBJECT:
+//-   * Meta: Key ID
+//-   * Name: The name of the category
+//-   * Description: The description of the category
+//-   * Images: [Object]
+//-     |-- Cover: The cover image for the category
+//-     |-- Logo: [Object]
+//-     |   |-- Black: The black version of the logo
+//-     |   |-- White: The white version of the logo
+//- 
+//-----------------------------------------
+
+-
+  var categories = {
+    "raiox": {
+      "meta": "raio-x",
+      "name": "Raio-X",
+      "description": "A série Raio-X tem como objetivo mostrar a essência do protagonista. O conceito é extrair o DNA do sucesso de cada mentor através de perguntas profundas sobre vários aspectos de vida, sua visão de mundo, e seus relacionamentos interpessoais.",
+      "images": {
+        "cover": "raio-x",
+        "logo": {
+          "black": "raio-x--black",
+          "white": "raio-x--white",
+        },
+      },
+    },
+    "estudodecaso": {
+      "meta": "estudo-de-caso",
+      "name": "Estudo de Caso",
+      "description": "A série Estudo de Caso consiste de filmes produzidos com proprietários e diretores de empresas de sucesso, tanto as que já estão consolidadas, quanto projetos promissores, em início de operação. O objetivo é inspirar e contribuir para  o aumento do conhecimento de quem procura ser bem sucedido na vida profissional, gerando insights das histórias de quem já chegou lá e de quem está no caminho.",
+      "images": {
+        "cover": "estudo-de-caso",
+        "logo": {
+          "black": "estudo-de-caso--black",
+          "white": "estudo-de-caso--white",
+        },
+      },
+    },
+    "semfronteiras": {
+      "meta": "sem-fronteiras",
+      "name": "Sem Fronteiras",
+      "description": "A série Sem Fronteiras não tem roteiro pré-definido, ou barreiras geográficas. O objetivo principal é produzir vídeos com insights relevantes sobre os mais diversos assuntos, de vários lugares do mundo.",
+      "images": {
+        "cover": "sem-fronteiras",
+        "logo": {
+          "black": "sem-fronteiras--black",
+          "white": "sem-fronteiras--white",
+        },
+      },
+    },
+    "linhadotempo": {
+      "meta": "linha-do-tempo",
+      "name": "Linha do Tempo",
+      "description": "A série Linha do Tempo retrata a vida pessoal e profissional de um mentor, contada apenas por ele. O conceito da série introduz a história desde a infância até seu momento atual do mentor, gerando vídeos atemporais e inspiradores.",
+      "images": {
+        "cover": "linha-do-tempo",
+        "logo": {
+          "black": "linha-do-tempo--black",
+          "white": "linha-do-tempo--white",
+        },
+      },
+    },
+  }
+
+//-----------------------------------------
+//-   CATEGORIES ARRAY
+//- 
+//-   Mainly used for looping through the object.
+//-----------------------------------------
+
+- var categoriesArray = Object.values(categories)

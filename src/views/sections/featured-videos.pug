@@ -1,0 +1,6 @@
+section#featured-videos.featured-videos
+  //- Loop through the 6 most recent items that aren't the most recent one.
+  - for (var i = 1; i < 7; i++)
+    //- Video Card component referenced from: /views/components/video-card.pug
+    //- videosList is the array from the Videos object
+    +videoCard(videosArray[i])

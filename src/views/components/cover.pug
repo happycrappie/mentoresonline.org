@@ -1,0 +1,41 @@
+//-----------------------------------------
+//-     COVER COMPONENT
+//- 
+//-     This component displays the a Cover for a Page, currently for the Home Page and Video Template.
+//- 
+//-    RECEIVES:
+//-    * video {Object} – The specific video object from [VIDEOS] or [FEATURED] Object. 
+//-    * meta {String} – If present, should receive the page's meta. If not, will show the video meta from the video object.
+//-    * isFeatured {bool} – If true, will get image from featured folder, if not, will get from Cover folder.
+//-
+//-----------------------------------------
+
+mixin cover(video, meta, isFeatured)
+  section.featured.cover(id=(meta ? meta : video.meta) + "-cover", style=(isFeatured ? "background-image: url(/img/featured/featured-bg--" : "background-image: url(/img/covers/cover-bg--") + video.images.cover + ".jpg);")
+    .row
+      article.cover-video
+        figure.cover-video--category
+          img(src="/img/logos/logo-serie--" + video.category.images.logo.white + ".svg", alt="Logotipo da série "+ video.category.name+ " do "+ siteName)
+        h2.cover-video--title #{video.title}
+        p.cover-video--description #{video.description}   
+        
+
+      a(href="/" + video.category.meta + "/" + video.meta, id=isVideoPage ? "open-video" : "", title="Assista o vídeo de "+video.title+" no "+video.category.name+" do "+siteName, rel='noopener noreferrer').play-button 
+        img(src="/img/icons/icon-play--white.svg", alt="Ícone de Play")
+        span Assistir ao vídeo
+
+    .row
+      include ../sections/partners.pug
+
+    if isVideoPage
+      .row
+        a(href="#transcricao", title="Leia a transcrição").scroll-down.--white Leia a transcrição
+
+  if isVideoPage
+    section#watch-the-video.watch-the-video
+      iframe#player(src='https://www.youtube.com/embed/'+ video.key +'?enablejsapi=1', frameborder='0', allowfullscreen)
+
+      p#close-the-video.button.--red Fechar
+
+  script
+    include ../../js/youtube.js

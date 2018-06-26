@@ -1,0 +1,190 @@
+//-----------------------------------------
+//-     VIDEOS DATABASE
+//-     Type: Child
+//- 
+//-     This database will hold information about each video recorded by the Mentores Online team, referencing other Databases, like Profiles and Categories databases.
+//-
+//-    VIDEOS OBJECT: [VIDEO Object]
+//-
+//-----------------------------------------
+//-
+//-    VIDEO OBJECT:
+//-    * Meta: Key ID
+//-    * Title: The title for this specific video
+//-    * Description: The description for this specific video
+//-    * Date: [Object]
+//-    * |-- Year: The year the video has been released
+//-    * Category: REF. specific [CATEGORIES] Object
+//-    * Profiles: [Array]
+//-    * |-- REF. specific [PROFILES] Object
+//-    * Images: [Object]
+//-    * |-- Minicover: The mini cover for video cards
+//-    * |-- Minipreview: The mini preview for video cards
+//-    * |-- Cover: The full-size pictures
+//-    * URL: The YouTube URL for the video 
+//-
+//-----------------------------------------
+
+-
+  var videos = {
+    "wendellcarvalho": {
+      "meta": "wendell-carvalho",
+      "title": "Wendell Carvalho",
+      "description": "Inspire-se com a visão de vida do especialista em mudança comportamental e estratégias para atingir metas.",
+      "date": {
+        "year": "2018",
+      },
+      "category": categories.raiox,
+      "profiles": [profiles.wendellcarvalho],
+      "images": {
+        "cover": "wendell-carvalho",
+        "minicover": "wendell-carvalho--bg",
+        "minipreview": "wendell-carvalho-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=6mwl-HU6hQA",
+      "key": "6mwl-HU6hQA",
+    },
+    "rosanabraga": {
+      "meta": "rosana-braga",
+      "title": "Rosana Braga",
+      "description": "Conheça a visão de vida de Rosana Braga, jornalista e escritora especializada em relacionamento e auto estima.",
+      "date": {
+        "year": "2018",
+      },
+      "category": categories.raiox,
+      "profiles": [profiles.rosanabraga],
+      "images": {
+        "cover": "rosana-braga",
+        "minicover": "rosana-braga--bg",
+        "minipreview": "rosana-braga-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=ZWuKasPfuOo",
+      "key": "ZWuKasPfuOo",
+    },
+    "rodrigocardoso": {
+      "meta": "rodrigo-cardoso",
+      "title": "Rodrigo Cardoso",
+      "description": "Eleito o Melhor Treinador do Brasil pelo prêmio Top Chance, o Power Trainer Rodrigo Cardoso é o criador de programas únicos e transformadores de formação de treinadores de alto impacto.",
+      "date": {
+        "year": "2018",
+      },
+      "category": categories.raiox,
+      "profiles": [profiles.rodrigocardoso],
+      "images": {
+        "cover": "rodrigo-cardoso",
+        "minicover": "rodrigo-cardoso--bg",
+        "minipreview": "rodrigo-cardoso-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=EX2rL1VtDm0",
+      "key": "EX2rL1VtDm0",
+    },
+    "cassiamallmann": {
+      "meta": "cassia-mallmann",
+      "title": "Cassia Mallmann",
+      "description": "Conheça a visão de vida e mundo pela ótica de Cássia Mallmann, estilista e empresária do segmento de moda em Santa Catarina.",
+      "date": {
+        "year": "2017",
+      },
+      "category": categories.raiox,
+      "profiles": [profiles.cassiamallmann],
+      "images": {
+        "cover": "cassia-mallmann",
+        "minicover": "cassia-mallmann--bg",
+        "minipreview": "cassia-mallmann-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=OgHZJqHg2NM",
+      "key": "OgHZJqHg2NM",
+    },
+    "vanessatobias": {
+      "meta": "vanessa-tobias",
+      "title": "Vanessa Tobias",
+      "description": "Conheça no primeiro vídeo da série Raio -X a Vanessa Tobias, umas das mulheres mais influentes de Santa Catarina. A Vanessa Tobias é uma Coaching que atua no segmento de treinamentos para a vida e para empresas.",
+      "date": {
+        "year": "2017",
+      },
+      "category": categories.raiox,
+      "profiles": [profiles.vanessatobias],
+      "images": {
+        "cover": "vanessa-tobias",
+        "minicover": "vanessa-tobias--bg",
+        "minipreview": "vanessa-tobias-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=C-zh-3HNSNQ",
+      "key": "C-zh-3HNSNQ",
+    },
+    //- "clinks": {
+    //-   "meta": "clinks",
+    //-   "title": "Ricardo Azevedo – Clinks",
+    //-   "description": "Conheça a história do Clinks, agência Google partner Premier. Ricardo Azevedo fala como tudo começou e explica como obter melhores resultados utilizando as ferramentas de marketing digital do Google.",
+    //-   "date": {
+    //-     "year": "2017",
+    //-   },
+    //-   "category": categories.estudodecaso,
+    //-   "profiles": [profiles.clinks],
+    //-   "images": {
+    //-     "cover": "clinks",
+    //-     "minicover": "clinks--bg",
+    //-     "minipreview": "clinks-hover--bg",
+    //-   },
+    //-   "url": "https://www.youtube.com/watch?v=n2CdK-4xvuo",
+    //- },
+    "brunoesimone": {
+      "meta": "bruno-e-simone",
+      "title": "Bruno Selva e Simone Cesa",
+      "description": "O Mentores Online foi até o vale do silício e entrevistou dois Brasileiros que trabalham em gigantes da tecnologia. Bruno Selva e Simone Cesa falam como é trabalhar e morar no berço da inovação nos Estados Unidos.",
+      "date": {
+        "year": "2017",
+      },
+      "category": categories.semfronteiras,
+      "profiles": [profiles.brunoselva, profiles.simonecesa],
+      "images": {
+        "cover": "bruno-simone",
+        "minicover": "bruno-simone--bg",
+        "minipreview": "bruno-simone-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=G-yXlqa-hH8",
+      "key": "G-yXlqa-hH8",
+    },
+    "lunarfilm": {
+      "meta": "lunarfilm",
+      "title": "Lunarfilm",
+      "description": "Conheça a história do Ney da Lunarfilm. Um empreendedor nato que superou todas as adversidades e hoje tem um das maiores empresas distribuidoras de películas automotivas e residenciais do Brasil a R5 Window Film.",
+      "date": {
+        "year": "2017",
+      },
+      "category": categories.estudodecaso,
+      "profiles": [profiles.neymoraes],
+      "images": {
+        "cover": "lunarfilm",
+        "minicover": "lunarfilm--bg",
+        "minipreview": "lunarfilm-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=hWOjNVRqWx4",
+      "key": "hWOjNVRqWx4",
+    },
+    "morongomormaii": {
+      "meta": "morongo-mormaii",
+      "title": "Morongo da Mormaii",
+      "description": "Existem jeitos e jeitos de lidar com negócios. E existe também o jeito do Morongo. O apelido, aliás, vem da infância. Marco Aurélio trazia umas pintinhas no rosto, semelhantes às existentes no morango.... Conheça a História de vida do fundador da Mormaii. Médico, músico, surfista, visionário!",
+      "date": {
+        "year": "2017",
+      },
+      "category": categories.linhadotempo,
+      "profiles": [profiles.morongo],
+      "images": {
+        "cover": "morongo",
+        "minicover": "morongo--bg",
+        "minipreview": "morongo-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=BObuVPlA9rE",
+      "key": "BObuVPlA9rE",
+    },
+  }
+
+//-----------------------------------------
+//-   VIDEOS ARRAY
+//- 
+//-   Mainly used for looping through the object.
+//-----------------------------------------
+
+- var videosArray = Object.values(videos)

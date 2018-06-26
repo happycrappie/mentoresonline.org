@@ -1,0 +1,36 @@
+//-----------------------------------------
+//-     NAV COMPONENT
+//- 
+//-     This component the navigation for the Main Menu.
+//-     This is a CLOSED component, which only receives its own scoped variable.
+//-
+//-----------------------------------------
+
+
+nav#nav(class="nav" + (darkBG ? " --white" : " --black"))
+  -
+    var navLinks = [
+      {
+        title: "Home",
+        url: "/",
+      }, {
+        title: "Séries",
+        url: "/series/",
+      },/* {
+        title: "Recursos",
+        url: "/recursos.html",
+      },*/ {
+        title: "Sobre",
+        url: "/sobre/",
+      }, /*{
+        title: "Apoie o projeto",
+        url: "/apoie-o-projeto.html",
+        button: true,
+      },*/
+    ];
+  
+  mixin nav-links(link)
+    a(href=link.url, title=link.title + " - " + siteName, class=!link.button ? "nav--link" : "button --red", rel='noopener noreferrer')= link.title
+
+  for link in navLinks
+    +nav-links(link)

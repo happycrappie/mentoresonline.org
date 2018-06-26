@@ -1,0 +1,225 @@
+//-----------------------------------------
+//-    PROFILE DATABASE
+//-    Type: Mother
+//-
+//-    This database will hold the profiles of each person recorded by the Mentores Online team, with useful information about the person, like a nice profile pic and social media links.
+//-
+//-    PROFILES OBJECT: [PROFILE Object]
+//-
+//-----------------------------------------
+//-
+//-    PROFILE OBJECT:
+//-    * Meta: Key ID
+//-    * Name: Name of the person
+//-    * Job: The job title of that person, or how he/she identifies him/herself.
+//-    * Quote: A quote they like, or a mere description of who they are.
+//-    * Links: [Array] 
+//-      |-- [Object]:
+//-      |   - Type: REF. specific [LINKS] Object.
+//-      |   - Handle: The link/social handle.
+//-    * Images: [Object]
+//-       |-- Profile: The profile picture
+//-
+//-----------------------------------------
+
+-
+  var profiles = {
+    "wendellcarvalho": {
+      "meta": "wendell-carvalho",
+      "name": "Wendell Carvalho",
+      "job": "CEO da Kairos Treinamentos",
+      "quote": "Empreendedor e profundo pesquisador dos padrões de comportamento humanos. Impacta milhares de pessoas todos os anos com seus eventos presenciais de imersão, treinamentos on-line, mentorias, palestras e coaching para alta performance com líderes, executivos e atletas.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "channel/UCLyagz9J8bEcAEXDY8CfkAQ",
+        },{
+          type: links.facebook,
+          handle: "KairosTreinamentos",
+        },{
+          type: links.instagram,
+          handle: "wendellcarvalho_oficial",
+        },{
+          type: links.website,
+          handle: "wendellcarvalho.com.br",
+        },
+      ],
+      "images": {
+        "profile": "wendell-carvalho",
+      },
+    },
+    "rosanabraga": {
+      "meta": "rosana-braga",
+      "name": "Rosana Braga",
+      "job": "Escritora, psicóloga e coach",
+      "quote": "Autora de 8 livros sobre amor e relacionamento, dentre eles, best-sellers 'Faça o Amor Valer a Pena' e 'O Poder da Gentileza', Rosana Braga é pós-graduada em educação sexual e reconhecida como uma das maiores especialistas em relacionamento & comunicação do país.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "user/senhabaggio",
+        },{
+          type: links.facebook,
+          handle: "rosanabragaescritora",
+        },{
+          type: links.instagram,
+          handle: "braga_rosana",
+        },{
+          type: links.twitter,
+          handle: "rosana_braga",
+        },{
+          type: links.website,
+          handle: "rosanabraga.com.br",
+        },
+      ],
+      "images": {
+        "profile": "rosana-braga",
+      },
+    },
+    "rodrigocardoso": {
+      "meta": "rodrigo-cardoso",
+      "name": "Rodrigo Cardoso",
+      "job": "Treinador, Coach, Palestrante e Escritor",
+      "quote": "Engenheiro formado pela USP com pós-graduaçnao em psicologia, Leader Coach pelo Institute of International Research & Crescimentum com formação internacional em Coaching, Mentoring e Holomentoring pelo Instituto Holus e Master PRacticioner pela SBPNL.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "user/rodrigocardosoBR",
+        },{
+          type: links.facebook,
+          handle: "PowerTrainer.UL",
+        },{
+          type: links.instagram,
+          handle: "rodrigo_cardosobr",
+        },{
+          type: links.website,
+          handle: "rodrigocardoso.com.br/novo-site",
+        },
+      ],
+      "images": {
+        "profile": "rodrigo-cardoso",
+      },
+    },
+    "neymoraes": {
+      "meta": "ney-moraes",
+      "name": "Ney Moraes",
+      "job": "CEO da Lunarfilm",
+      "quote": "Ney é um empreendedor nato que superou todas as suas adversidades e hoje tem uma das maiores empresas distribuidoras de películas automotivas e residenciais do Brasil, a R5 Window Film.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "user/lunarfilmpeliculas",
+        },{
+          type: links.facebook,
+          handle: "lunarfilmpeliculas",
+        },{
+          type: links.instagram,
+          handle: "lunarfilmpeliculas",
+        },{
+          type: links.website,
+          handle: "www.lunarfilm.com.br",
+        },
+      ],
+      "images": {
+        "profile": "ney-moraes",
+      },
+    },
+    "morongo": {
+      "meta": "morongo",
+      "name": "Marco Aurélio Raymundo",
+      "job": "Empreendedor, Doutor e Surfista",
+      "quote": "Formado em medicina, Morongo deixou o Rio Grande do Sul para viver uma vida diferente em Santa Catarina. A vontade de surfar e o altruísmo o atraíram para um vilarejo ainda sem abastecimento de energia elétrica e atendimento médico, onde estabeleceu posto, ajudou pessoas e começou seu negócio de roupas de neoprene.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "user/Mormaiioficial",
+        },{
+          type: links.facebook,
+          handle: "MormaiiOficial",
+        },{
+          type: links.instagram,
+          handle: "mormaiioficial",
+        },{
+          type: links.website,
+          handle: "www.mormaii.com.br",
+        },
+      ],
+      "images": {
+        "profile": "morongo",
+      },
+    },
+    "brunoselva": {
+      "meta": "bruno-selva",
+      "name": "Bruno Selva",
+      "job": "Engenheiro, Empreendedor e Gerente de Projetos da Automation Anywhere",
+      "quote": "Formado em engenharia na UFSC, e com mestrado em Software Management na Carnegie Mellon University, Bruno está trabalhando para criar a ponte entre empresas e a tecnologia de Inteligencia Artificial através de produtos.",
+      "links": [
+        {
+          type: links.linkedin,
+          handle: "brunoselva",
+        },
+      ],
+      "images": {
+        "profile": "bruno-selva",
+      },
+    },
+    "simonecesa": {
+      "meta": "simone-cesa",
+      "name": "Simone Cesa",
+      "job": "Especialista em Internacionalização da Apple",
+      "quote": "Formada em Relações Internacionais na UFSC, Simone conquistou mestrados de Peacekeeping and Security Studies na Università degli Studi di Roma Tre, e International Marketng na Hult International Business School. Simone já ajudou empresas como Glassdoor e Yik Yak, em São Francisco, e agora trabalha para a Apple, em Cupertino.",
+      "links": [
+        {
+          type: links.linkedin,
+          handle: "simonecesademelo",
+        },
+      ],
+      "images": {
+        "profile": "simone-cesa",
+      },
+    },
+    "cassiamallmann": {
+      "meta": "cassia-mallmann",
+      "name": "Cassia Mallmann",
+      "job": "Estilista e Empreendedora",
+      "quote": "Em 2006 a estilista Cássia Mallmann idealizou que a moda Praia brasileira tinha espaço para uma leitura mais autoral, e foi assim que criou a marca que leva o seu nome. Hoje a marca CASSIA MALLMANN tem consolidação nacional, vestindo diversas personalidades do meio artístico e social, e mantendo pontos de vendas de referência em todos os estados brasileiros.",
+      "links": [
+        {
+          type: links.pinterest,
+          handle: "Cassiamallmann",
+        },{
+          type: links.facebook,
+          handle: "CassiaMallmann",
+        },{
+          type: links.instagram,
+          handle: "cassiamallmann",
+        },
+      ],
+      "images": {
+        "profile": "cassia-mallmann",
+      },
+    },
+    "vanessatobias": {
+      "meta": "vanessa-tobias",
+      "name": "Vanessa Tobias",
+      "job": "Empresária e Coach",
+      "quote": "A empresária é pioneira em processos de Life Coaching em grupo no Brasil, mestre em Administração pela ESAG, vencedora do Prêmio Mulheres que fazem a Diferença da ACIF, na categoria negócios e possui cursos nacionais e internacionais – Estados Unidos e Austrália – com os principais nomes da sua área.",
+      "links": [
+        {
+          type: links.youtube,
+          handle: "user/VANESSATOBIASAL",
+        },{
+          type: links.facebook,
+          handle: "grupovanessatobias",
+        },{
+          type: links.instagram,
+          handle: "vanessa_tobias",
+        },{
+          type: links.website,
+          handle: "www.vanessatobias.com.br",
+        },
+      ],
+      "images": {
+        "profile": "vanessa-tobias",
+      },
+    },
+  }

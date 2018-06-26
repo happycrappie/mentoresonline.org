@@ -1,0 +1,32 @@
+//-----------------------------------------
+//-     VIDEO CARD COMPONENT
+//- 
+//-     This component displays a Video Card with important information about the specific video and a link to the video's page.
+//- 
+//-    RECEIVES:
+//-    * video {Object} – Receives an object, more specifically built to receive the [VIDEOS] Object.
+//-
+//-----------------------------------------
+
+mixin videoCard(video)
+  article.video-card
+    .video-card--bg.--minicover(style="background-image: url(/img/mini-covers/" + video.category.meta + "--" + video.images.minicover + ".jpg);")
+    .video-card--bg.--minipreview(style="background-image: url(/img/mini-previews/" + video.category.meta + "--" +  video.images.minipreview + ".jpg);")
+
+    header.video-card-header
+      figure.video-card-header--category
+        img(src="/img/logos/logo-serie--" + video.category.images.logo.white + ".svg")
+      button.video-card-header--watch
+        span
+        | Assistir
+    
+    section.video-card-info
+      h3.video-card-info--title #{video.title}
+      p.video-card-info--extra
+        if video.date.year
+          span #{video.date.year}
+        if video.episode
+          span Episódio #{video.episode}
+      p.video-card-info--description #{video.description}
+
+    a(href="/" + video.category.meta + "/" + video.meta, title="Assista o vídeo " + video.title + " no Mentores Online").video-card--link 

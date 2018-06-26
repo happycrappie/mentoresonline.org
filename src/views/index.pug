@@ -1,0 +1,21 @@
+extends templates/default.pug
+
+block pageVars
+  -
+    var page = {
+      name: "Home",
+      meta: "home"
+    }
+  - var darkBG = true;
+
+block content
+  main#home.page
+    //- Video Card component referenced from: /views/components/video-card.pug
+    //- featured is the object from: /_data/featured.pug
+    +cover(featured.cover, page.meta, true)
+    
+    section#homeContent.home-content
+      include sections/featured-videos.pug
+      include sections/quote.pug
+      include sections/series-categories.pug
+      include sections/supporters.pug

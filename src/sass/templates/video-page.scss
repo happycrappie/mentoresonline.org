@@ -1,0 +1,220 @@
+#video.page {
+  
+  .scroll-down {
+    margin-top: 1.6rem;
+  }
+
+  .video-content {
+    @extend %padding;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+
+    &--title {
+      font-family: $font-family--title;
+      font-size: 3rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      
+      margin-bottom: 1rem;
+    }
+  }
+
+  .video-contents {
+    display: flex;
+    
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  .video-transcription {
+    width: 100%;
+    max-width: calc(70% - 1rem);
+    margin-right: 1rem;
+    
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+      margin-right: 0;
+    }
+    
+    .row {
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+      }  
+    }
+    
+    .col {
+      &:nth-of-type(odd) { padding-right: 35px; }
+      &:nth-of-type(even) { padding-left: 35px; }
+      
+      @media screen and (max-width: 1024px) {
+        &:nth-of-type(odd) { padding-right: 20px; }
+        &:nth-of-type(even) { padding-left: 20px; }
+      }  
+      @media screen and (max-width: 767px) {
+        &:nth-of-type(odd),
+        &:nth-of-type(even) {
+          padding: 0;
+        }
+      }  
+    }
+
+    &--title,
+    h2 {
+      font-family: $font-family--title;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      margin-top: 1.6rem;
+      margin-bottom: .6rem;
+    }
+
+    &--text,
+    p {
+      font-family: $font-family--text;
+      font-size: 1rem;
+      text-align: justify;
+
+      margin-bottom: .6rem;
+
+      &:first-child {
+        margin-top: 4.4rem;
+
+        @media screen and (max-width: 767px) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &--quote,
+    h3 {
+      position: relative;
+
+      width: 100%;
+      max-width: 80%;
+      
+      font-family: $font-family--quote;
+      font-size: 1.8rem;
+      
+      margin-top: 2.6rem;
+      margin-bottom: 1.6rem;
+      margin-left: 1rem;
+
+      &:after {
+        content: '';
+        
+        position: absolute;
+        top: 50%;
+        left: -1.4rem;
+
+        width: 2px;
+        height: 105%;
+
+        background: $color--red;
+
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .video-info {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 30%;
+
+    padding-top: 2rem;
+    padding-left: 3rem;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+
+      align-items: center;
+
+      padding: 0;
+    }
+
+    &-profile {
+      position: relative;
+
+      max-width: 460px;
+
+      margin: 1.4rem 0;
+      padding: 3.6rem 1rem 1rem;
+      
+      background-color: #ededed;
+
+      @media screen and (max-width: 1024px) {
+        margin: 7rem 0 1rem;
+      }
+
+      &--pic {
+        position: absolute;
+        top: -3.6rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        width: 100px;
+        height: 100px;
+
+        border-radius: 50%;
+        box-shadow: 0 12px 42px rgba(black, .29);
+      }
+
+      &--author {
+        font-family: $font-family--title;
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.2;
+      }
+      &--title {
+        font-family: $font-family--text;
+        font-size: .9rem;
+        text-align: center;
+        line-height: 1.4;
+
+        color: $color--gray;
+      }
+      &--quote {
+        font-size: .9rem;
+        line-height: 1.4;
+        text-align: center;
+
+        margin: .8rem;
+
+        opacity: .8;
+      }
+      &--social {
+        display: flex;
+        justify-content: center;
+
+        margin: 1rem 0;
+
+        &-link {
+          display: flex;
+          
+          margin: 0 1rem;
+
+          opacity: .4;
+          filter: grayscale(1); 
+          transition: all 260ms ease;
+
+          img {
+            max-width: 25px;
+            max-height: 25px;
+            object-fit: contain;
+            object-position: center;
+          }
+
+          &:hover {
+            opacity: 1;
+            filter: grayscale(0);
+          }
+        }
+      }
+    }
+  }
+}

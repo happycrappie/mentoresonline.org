@@ -1,0 +1,16 @@
+//-----------------------------------------
+//-     LOGO COMPONENT
+//- 
+//-     This component displays the image you pass, with a url and / or name.
+//- 
+//-    RECEIVES:
+//-    * image {String} – The path of the image you want to display.
+//-    * url {String} – The URL you want to apply to the image.
+//-    * name {String} – The name of the logo.
+//-    * classes {String} – The classes attributed to the logo.
+//-
+//-----------------------------------------
+
+mixin logo(image, url, name, classes)
+  a(href=url ? url : '', title=name ? name : '', rel='noopener noreferrer', class=classes ? "logo " + classes : "logo")
+    img(src=image ? image : '/img/logo--mockup.png', alt=name ? "Logotipo do" + name : '')
