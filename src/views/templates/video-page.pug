@@ -75,7 +75,7 @@ html
                 nav.video-info-profile--social
                   if profile.links
                     each social in profile.links
-                      a(href=social.type.url + social.handle, title="Acessar o " + social.type.name + " de " + profile.name).video-info-profile--social-link 
+                      a(href=social.type.url + social.handle, title="Acessar o " + social.type.name + " de " + profile.name, target="_blank").video-info-profile--social-link 
                         img(src="/img/icons/icon-share--" + social.type.meta + ".svg", alt=social.type.name)
 
     include ../sections/footer.pug  
