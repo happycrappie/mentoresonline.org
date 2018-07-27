@@ -171,3 +171,18 @@ var showValidMessage = (element, message) => {
     removeClass(element, 'active');
   }, 4000);
 }
+
+/**
+ * 
+ * @param {DOMElement} element – DOM element to truncate text
+ * @param {number} maxLength  – Maximum length of the text
+ */
+function truncateText(element, maxLength) {
+  // var element = document.querySelector(selector),
+  var truncated = element.innerHTML;
+
+  if (truncated.length > maxLength) {
+    truncated = truncated.substr(0, maxLength) + '...';
+  }
+  return truncated;
+}
