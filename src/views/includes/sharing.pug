@@ -1,11 +1,11 @@
-meta(property="og:title", content=page.name ? page.name : siteName + " | " + siteQuote)
+meta(property="og:title", content=page.title ? page.title + " | " + page.subtitle : siteName + " | " + siteQuote)
 meta(property="og:url", content=page.url ? page.url : siteURL)
 meta(property="og:description", content=page.description ? page.description : siteDesc)
-meta(property="og:image", content=page.image ? page.image : siteShare.bg)
+meta(property="og:image", content=page.image ? siteURL + page.image : siteURL + siteShare.bg)
 meta(property="og:type", content=page.type ? page.type : siteShare.type)
 meta(property="og:locale", content=siteShare.locale)
 
 //- Twitter Cards
-meta(name="twitter:card", content="summary")
+meta(name="twitter:card", content="summary_large_image")
 meta(name="twitter:site", content="@mentoresonline")
 meta(name="twitter:creator", content="@mentoresonline")
