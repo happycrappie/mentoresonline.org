@@ -1,9 +1,17 @@
 head
-  title #{siteName} | #{siteQuote}
+  if page.title
+    title #{page.title} | #{page.subtitle}
+    meta(name="description", content="#{page.description}")
+  else
+    title #{siteName} | #{siteQuote}
+    meta(name="description", content="#{siteDescription}")
 
   meta(charset="UTF-8")
   meta(name="viewport", content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
   meta(http-equiv="X-UA-Compatible", content="ie=edge")
+
+  meta(name="author", content="Eryc da Silva, CDO do Mentores Online")
+  //- meta(name="keywords", content="")
 
   include sharing.pug
   include favicon.pug
