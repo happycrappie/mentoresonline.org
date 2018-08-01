@@ -1,4 +1,4 @@
-meta(property="og:title", content=page.title ? page.title : siteName + " | " + siteQuote)
+meta(property="og:title", content=page.title ? page.title + " | " + page.subtitle : siteName + " | " + siteQuote)
 meta(property="og:url", content=page.url ? page.url : siteURL)
 meta(property="og:description", content=page.description ? page.description : siteDesc)
 meta(property="og:image", content=page.image ? siteURL + page.image : siteURL + siteShare.bg)
