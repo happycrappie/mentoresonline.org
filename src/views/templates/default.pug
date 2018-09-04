@@ -8,8 +8,8 @@ html
   include ../includes/components.pug
 
   body(class=page.meta ? page.meta + "-page" : "page")
-    include ../includes/analytics/gtm-body.pug
     include ../sections/header.pug
+    include ../includes/analytics/gtm-body.pug
 
     block content
 
