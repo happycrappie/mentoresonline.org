@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/happycrappie/mentoresonline-site-2018#readme",
   "devDependencies": {
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.26.3",
     "critical": "^1.3.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
