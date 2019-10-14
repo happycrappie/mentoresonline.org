@@ -1,20 +1,19 @@
 /*****************
  * Gulp Requires
  *****************/
+  const { src, dest, series, parallel } = require('gulp'),
+        pug = require('gulp-pug'),
+        sass = require('gulp-sass'),
+        bs = require('browser-sync'),
+        babel = require('gulp-babel'),
+        clean = require('gulp-clean'),
+        concat = require('gulp-concat'),
+        plumber = require('gulp-plumber'),
+        cleanCSS = require('gulp-clean-css'),
+        prefix = require('gulp-autoprefixer'),
+        concatCSS = require('gulp-concat-css');
 
-const { src, dest, series, parallel } = require('gulp'),
-      pug = require('gulp-pug'),
-      sass = require('gulp-sass'),
-      bs = require('browser-sync'),
-      babel = require('gulp-babel'),
-      clean = require('gulp-clean'),
-      concat = require('gulp-concat'),
-      plumber = require('gulp-plumber'),
-      cleanCSS = require('gulp-clean-css'),
-      prefix = require('gulp-autoprefixer'),
-      concatCSS = require('gulp-concat-css');
-
-const reload = bs.reload;
+  const reload = bs.reload;
 
 /*****************
  * Paths
@@ -30,6 +29,7 @@ const reload = bs.reload;
     css: srcRoot + 'sass/',
     mail: srcRoot + 'mail/',
     views: srcRoot + 'views/',
+    pages: srcRoot + 'views/pages/',
     videos: srcRoot + 'views/videos/',
     assets: srcRoot + 'assets/',
   }
@@ -39,6 +39,7 @@ const reload = bs.reload;
     css: buildRoot + 'css/',
     img: buildRoot + 'img/',
     mail: buildRoot + 'mail/',
+    fonts: buildRoot + 'fonts/',
     videos: {
       raiox: buildRoot + 'raio-x/',
       linha: buildRoot + 'linha-do-tempo/',
@@ -51,10 +52,7 @@ const reload = bs.reload;
 /*****************
  * Views
  *****************/
-  function views(cb) {
-    const views = srcRoot + 'views/',
-          pages = views + 'pages/',
-          videos = views + 'videos/';
+  function views() {
 
     return src([
         views + '*.pug',
@@ -100,8 +98,6 @@ const reload = bs.reload;
     cb();
   }
 
-
-
 /*****************
  * Scripts
  *****************/
@@ -115,20 +111,37 @@ const reload = bs.reload;
     cb();
   }
 
+/*****************
+ * Move Files
+ *****************/
+  function move(cb) {
+    // Move Favicon
+    src([
+      srcRoot + '*.ico',
+      srcPaths.assets + 'favicon/*',
+    ], { allowEmpty: true })
+      .pipe(dest(buildRoot));
+    
+    // Move Fonts
+    src(srcPaths.assets + 'fonts/**/*')
+      .pipe(dest(buildPaths.fonts));
+
+    cb();
+  }
+
  /*****************
  * Clean Build
  *****************/
-
-function cleanBuild() {
-  return src(buildRoot, {
-    allowEmpty: true
-  }).pipe(clean());  
-}
+  function cleanBuild() {
+    return src(buildRoot, {
+      allowEmpty: true
+    }).pipe(clean());  
+  }
 
 
 /*****************
  * Gulp Exports
  *****************/
 exports.clean = cleanBuild;
-exports.dev = series(cleanBuild, views, styles, scripts);
+exports.dev = series(cleanBuild, views, styles, scripts, move);
 //exports.build = series();
