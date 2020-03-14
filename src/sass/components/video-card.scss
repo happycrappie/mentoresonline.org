@@ -134,6 +134,21 @@
 
       opacity: .8;
     }
+
+    &--tag {
+      display: inline-block;
+
+      font-family: $font-family--title;
+      font-size: .6rem;
+      text-transform: uppercase;
+      letter-spacing: .05rem;
+      
+      padding: .1rem .6rem;
+      margin-bottom: .5rem;
+      
+      color: white;
+      background-color: rgba(0,0,0,.4);
+    }
   }
 
   .video-card-header,

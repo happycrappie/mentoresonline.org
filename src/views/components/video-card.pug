@@ -21,6 +21,8 @@ mixin videoCard(video)
         | Assistir
     
     section.video-card-info
+      if video.series /* Will show if the film has sequences. */
+        span.video-card-info--tag Filme ##{video.series.number}
       h3.video-card-info--title #{video.title}
       p.video-card-info--extra
         if video.date.year

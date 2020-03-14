@@ -104,6 +104,21 @@
   
       opacity: .8;
     }
+
+    &--tag {
+      display: inline-block;
+
+      font-family: $font-family--title;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+      
+      padding: .3rem 1rem;
+      margin-bottom: 1rem;
+      
+      color: white;
+      background-color: rgba(0,0,0,.4);
+    }
   }
 }
 

@@ -16,6 +16,8 @@ mixin cover(video, meta, isFeatured)
       article.cover-video
         figure.cover-video--category
           img(src="/img/logos/logo-serie--" + video.category.images.logo.white + ".svg", alt="Logotipo da série "+ video.category.name+ " do "+ siteName)
+        if video.series /* Will display if the film has sequences. */
+          span.cover-video--tag Filme ##{video.series.number} — série #{video.series.title}
         h2.cover-video--title #{video.title}
         p.cover-video--description #{video.description}   
         
