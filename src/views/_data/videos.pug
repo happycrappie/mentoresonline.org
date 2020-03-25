@@ -14,6 +14,9 @@
 //-    * Description: The description for this specific video
 //-    * Date: [Object]
 //-    * |-- Year: The year the video has been released
+//-    * Series: [Object]
+//-    * |-- Number: <Number> The series number.
+//-    * |-- Title: <String> The series title.
 //-    * Category: REF. specific [CATEGORIES] Object
 //-    * Profiles: [Array]
 //-    * |-- REF. specific [PROFILES] Object
@@ -27,6 +30,27 @@
 
 -
   var videos = {
+    "imperatrizSecond": {
+      "meta": "imperatriz-parte-2",
+      "title": "Supermercado Imperatriz",
+      "description": "Conheça a história do SUPER MERCADO IMPERATRIZ, uma das maiores redes de supermercados do sul do país. A história foi contada por todos os familiares e está repleta de emoção, inspiração e muito conhecimento!",
+      "date": {
+        "year": "2020",
+      },
+      "series": {
+        "title": "Supermercados Imperatriz",
+        "number": 2,
+      },
+      "category": categories.semfronteiras,
+      "profiles": false,
+      "images": {
+        "cover": "imperatriz",
+        "minicover": "imperatriz--bg",
+        "minipreview": "imperatriz-hover--bg",
+      },
+      "url": "https://www.youtube.com/watch?v=IZg6I8X5atQ",
+      "key": "IZg6I8X5atQ",
+    },
     "imperatriz": {
       "meta": "imperatriz",
       "title": "Supermercado Imperatriz",
