@@ -1,0 +1,6 @@
+.link {
+    display: inline;
+
+    &.--red { color: $color--red; }
+    &.--bold { font-weight: 700; }
+}
