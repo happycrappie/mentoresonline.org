@@ -13,24 +13,25 @@ block pageVars
 block content
   main#sobre.page
     section.sobre-cover
-      h2.sobre-cover--title Somos inspirados por você
-      p.sobre-cover--subtitle Ideias inspiram mudanças. Nossa ideia é inspirar o seu sucesso.
+      h2.sobre-cover--title Ideias inspiram mudanças.
+      //- p.sobre-cover--subtitle  Nossa ideia é inspirar o seu sucesso.
       
       a(href="#o-projeto", title="Conheça o projeto").scroll-down.--red Conheça o projeto
 
     
     section#o-projeto.sobre-projeto
       h3.sobre-projeto--text
-        | O 
-        span Mentores Online 
-        | é um projeto que torna acessível conteúdos no segmento do empreendedorismo para todos, especialmente você. Produzimos vídeos com conceito de documentários curtos que contam a história de vida e jornada de negócios de sucesso. 
-        span Nossa missão é inspirar pessoas 
-        | do mundo todo a atingirem seus próprios objetivos e sucesso, na vida pessoal ou profissional.
+        | O 
+        span Mentores Online 
+        | é uma plataforma especializada em produzir conteúdos sobre empreendedorismo, comportamento e inovação. Produzimos vídeos com conceito de documentários que contam a 
+        span história de pessoas que são autoridade 
+        | em suas áreas de atuação.
 
     section#categorias.sobre-categorias
       #videoCardBG
-      h3.sobre-categorias--title Apaixonados por aprender
-      p.sobre-categorias--subtitle Nossas séries originais saem da hipótese do que pode ser, ou o que será, para você aprender com a experiência de quem já fez acontecer.
+      h3.sobre-categorias--title Aprenda com quem já fez acontecer
+      p.sobre-categorias--subtitle Nossas séries originais saem da hipótese do que pode ser, ou o que será. 
+        a(href="/series", title="Link para a página de séries").link.--red.--bold Comece a aprender agora.
 
       .sobre-categorias--list
         each category in categories
